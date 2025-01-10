@@ -7,7 +7,7 @@ function Experience () {
         {
             id: 1,
             title: "Fondational project ALX Software Engineering (2023)",
-            details: "In conjection with two college, we built a quiz app using django and vinilla CSS"
+            details: "In conjection with two college, we built a quiz app using django and vanilla CSS"
         },
 
         {
@@ -17,7 +17,7 @@ function Experience () {
         },
         {
             id: 3,
-            title: "Mini E-commerce website",
+            title: "Mini E-commerce website(2024)",
             details: "Created a clothing website where cilent can showcase goods, using node js and react"
         }
     ]
