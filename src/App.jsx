@@ -8,16 +8,16 @@ function App() {
     <div className="bg-gray-950 text-gray-200 min-h-screen font-mono">
       {/* Header */}
       <section className="h-screen flex flex-col justify-center items-center text-center px-6">
-        <h1 className="text-4xl sm:text-6xl font-bold text-white mb-4">
+        <h1 className="font-gloock text-4xl sm:text-6xl font-bold text-white mb-4">
           Hi, I’m <span className="text-blue-400">Awotimilehin Babatunde</span>
         </h1>
-        <h2 className="text-xl sm:text-2xl text-gray-400 mb-6">
+        <h2 className="font-roboto text-xl sm:text-2xl text-gray-400 mb-6">
           <Typewriter
             words={[
               "Software Engineer 💻",
               "Full-Stack Developer ⚡",
               "Problem Solver 🚀",
-              "Bring ideas into live",
+              "Bringing ideas into live",
             ]}
             loop
             cursor
