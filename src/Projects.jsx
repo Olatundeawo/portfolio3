@@ -24,7 +24,7 @@ const Projects = () => {
             description:
               "A clean and responsive personal blog built with Python (Flask/Django), featuring easy navigation, blog posts, and deployed on PythonAnywhere.",
             github: "https://github.com/Olatundeawo/blog_website",
-            demo: "https://your-portfolio-link.com",
+            demo: "https://olatundeawo1.pythonanywhere.com/",
             image: Blog,
           },
           {
