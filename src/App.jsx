@@ -5,9 +5,7 @@ import Experience from "./Experience";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import { Typewriter } from "react-simple-typewriter";
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-
+import Resume from "./assets/Resume.pdf";
 function App() {
   return (
     <div className="bg-gray-950 text-gray-200 min-h-screen font-mono">
@@ -35,7 +33,8 @@ function App() {
 
         <div className="flex space-x-4">
           <a
-            href="/resume.pdf"
+            href={Resume}
+            target="_blank"
             className="bg-blue-500 hover:bg-blue-600 px-6 py-2 rounded-lg shadow-md transition"
           >
             View Resume
