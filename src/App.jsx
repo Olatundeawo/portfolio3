@@ -1,76 +1,67 @@
-import  { useState,  } from "react";
+import { useState } from "react";
 import About from "./About";
 import Skills from "./Skills";
 import Experience from "./Experience";
 import Projects from "./Projects";
 import Contact from "./Contact";
+import { Typewriter } from "react-simple-typewriter";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-
 function App() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
   return (
-    
-    <div
-      className="flex flex-col relative min-h-screen text-white bg-emerald-950">
+    <div className="bg-gray-950 text-gray-200 min-h-screen font-mono">
       {/* Header */}
-      <header className="font-mono">
-        <div className="flex justify-between items-center px-8 py-4">
-          {/* Logo or Header Text */}
-          <div className="text-2xl font-extrabold cursor-pointer bg-gradient-to-r from-blue-500 to-green-500 text-transparent bg-clip-text">
-  Babatunde Awotimilehin
-</div>
+      <section className="h-screen flex flex-col justify-center items-center text-center px-6">
+        <h1 className="text-4xl sm:text-6xl font-bold text-white mb-4">
+          Hi, I’m <span className="text-blue-400">Awotimilehin Babatunde</span>
+        </h1>
+        <h2 className="text-xl sm:text-2xl text-gray-400 mb-6">
+          <Typewriter
+            words={[
+              "Software Engineer 💻",
+              "Full-Stack Developer ⚡",
+              "Problem Solver 🚀",
+              "Bring ideas into live",
+            ]}
+            loop
+            cursor
+            cursorStyle="_"
+            typeSpeed={60}
+            deleteSpeed={40}
+            delaySpeed={1500}
+          />
+        </h2>
 
-
-          {/* Navigation Menu */}
-          <nav>
-            <ul className="hidden md:flex flex-row gap-6 text-sm uppercase tracking-wide">
-            <li className="cursor-pointer hover:text-emerald-300">About</li>
-              <li className="cursor-pointer hover:text-emerald-300">Experience</li>
-              <li className="cursor-pointer hover:text-emerald-300">Projects</li>
-              <li className="cursor-pointer hover:text-emerald-300">Contact</li>
-            </ul>
-          </nav>
-
-          {/* Mobile Menu Toggle */}
-          <div className="md:hidden">
-            <button onClick={toggleMobileMenu} className="text-xl">
-              {isMobileMenuOpen ? "✖" : "☰"}
-            </button>
-          </div>
+        <div className="flex space-x-4">
+          <a
+            href="/resume.pdf"
+            className="bg-blue-500 hover:bg-blue-600 px-6 py-2 rounded-lg shadow-md transition"
+          >
+            View Resume
+          </a>
+          <a
+            href="#contact"
+            className="border border-blue-500 hover:bg-blue-600 hover:text-white px-6 py-2 rounded-lg transition"
+          >
+            Contact Me
+          </a>
         </div>
-
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="flex flex-col bg-emerald-900 text-center text-sm md:hidden">
-            <ul className="space-y-4 py-4">
-            <li className="cursor-pointer hover:text-emerald-300">About</li>
-              <li className="cursor-pointer hover:text-emerald-300">Experience</li>
-              <li className="cursor-pointer hover:text-emerald-300">Projects</li>
-              <li className="cursor-pointer hover:text-emerald-300">Contact</li>
-            </ul>
-          </div>
-        )}
-      </header>
+      </section>
 
       {/* Main Content */}
-      <main className="flex flex-1 overflow-y-auto">
-        <div className="flex-grow">
-          <About />
-          <Skills />
-          <Experience />
-          <Projects />
-          <Contact />
-        </div>
-      </main>
-    </div>
 
+      <About />
+      {/* <Skills /> */}
+      {/* <Experience /> */}
+      <Projects />
+      <Contact />
+
+      <footer className="py-6 text-center text-gray-500 text-sm">
+        © {new Date().getFullYear()} Awotimilehin Babatunde. All rights
+        reserved.
+      </footer>
+    </div>
   );
 }
 

@@ -1,40 +1,82 @@
 import { motion } from "framer-motion";
-import Blog from './assets/Blog.png';
-import Hollart from './assets/Hollar.png'
+import Blog from "./assets/Blog.png";
+import Hollart from "./assets/Hollar.png";
 
 const Projects = () => {
-    return (
-        <motion.div
-        initial={{ y: "-100%", opacity: 0 }} // Start off-screen at the top
-        whileInView={{ y: 0, opacity: 1 }} // Slide down into view
-        viewport={{ once: true, amount: 0.2 }} // Trigger when 20% of the element is visible
-        transition={{ duration: 1.5, ease: "easeOut" }} // Smooth transition
-        >
-        <div className="pl-8">
-             <section className="flex items-center space-x-2">
-                
-                <h3 className="font-mono subpixel-antialiased font-black text-2xl "> Projects</h3>
-                <hr className="flex-1 border-t border-white"></hr>
-            </section>
-            <div className="flex flex-wrap justify-center gap-4 p-4">
-                <div className="image relative overflow-hidden group">
-                    <img src={Blog} alt="blog" className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110 group-hover:translate-x-2 group-hover:translate-y-2" />
-                    <div className="info font-serif absolute inset-0 flex flex-col items-center justify-center bg-black/70 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                        <h2 className="font-gloock font-bold text-amber-500 uppercase lg:text-4xl mb-12"> Blog Website</h2>
-                        <p className="font-sue md:text-2xl"> Is a fullstack project.It was developed using flask. it has admin panel</p>
-                    </div>
-                </div>
-                <div className="image relative overflow-hidden group">
-                    <img src={Hollart} alt="hollart" className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110 group-hover:translate-x-2 group-hover:translate-y-2" />
-                    <div className="info font-serif absolute inset-0 flex flex-col items-center justify-center bg-black/70 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                        <h2 className="font-gloock font-bold text-amber-500 uppercase lg:text-4xl mb-12 "> Site for Displaying clothings</h2>
-                        <p className="font-sue md:text-2xl"> It was developed using react, node js, it has a session based and authentication.</p>
-                    </div>
-                </div>
+  return (
+    <section id="projects" className="max-w-6xl mx-auto py-20 px-6">
+      <h2 className="text-3xl font-bold text-white mb-10 text-center">
+        My Projects
+      </h2>
+
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          {
+            title: "HollartKiddies – E-Commerce Platform",
+            description:
+              "A modern, responsive e-commerce app for kids’ fashion. Built with React, Tailwind, Node.js, Express, Cloudinary, and JWT authentication.",
+            github: "https://github.com/Olatundeawo/hollarkiddies_backend",
+            demo: "https://hollartkiddies.onrender.com/",
+            image: Hollart,
+          },
+          {
+            title: "Personal Blog Website",
+            description:
+              "A clean and responsive personal blog built with Python (Flask/Django), featuring easy navigation, blog posts, and deployed on PythonAnywhere.",
+            github: "https://github.com/Olatundeawo/blog_website",
+            demo: "https://your-portfolio-link.com",
+            image: Blog,
+          },
+          {
+            title: "Quiz App",
+            description:
+              "An interactive quiz application with face detection using React, Face-API.js, and Django backend for validation. Not live yet",
+            github: "https://github.com/Olatundeawo/testApp",
+            demo: "https://quiz-app-demo.com",
+            image: "/images/quizapp.png",
+          },
+        ].map((project, index) => (
+          <motion.div
+            key={index}
+            whileHover={{ scale: 1.05 }}
+            className="bg-gray-900 rounded-lg shadow-lg p-6"
+          >
+            {/* Project Image */}
+            <img
+              src={project.image}
+              alt={project.title}
+              className="h-40 w-full object-cover rounded mb-4"
+            />
+
+            {/* Project Info */}
+            <h3 className="text-xl font-semibold text-white">
+              {project.title}
+            </h3>
+            <p className="text-gray-400 mt-2">{project.description}</p>
+
+            <div className="flex space-x-4 mt-4">
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:underline"
+              >
+                GitHub
+              </a>
+              <a
+                href={project.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:underline"
+              >
+                Live Demo
+              </a>
             </div>
-        </div>
-    </motion.div>
-    )
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  );
 };
 
 export default Projects;
