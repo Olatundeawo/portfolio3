@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Github, Linkedin, Twitter } from "lucide-react";
 import Blog from "./assets/Blog.png";
 import Hollart from "./assets/Hollar.png";
 
@@ -32,7 +33,7 @@ const Projects = () => {
             description:
               "An interactive quiz application with face detection using React, Face-API.js, and Django backend for validation. Not live yet",
             github: "https://github.com/Olatundeawo/testApp",
-            demo: "https://quiz-app-demo.com",
+            // demo: "https://quiz-app-demo.com",
             image: "/images/quizapp.png",
           },
         ].map((project, index) => (
@@ -59,9 +60,8 @@ const Projects = () => {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-400 hover:underline"
               >
-                GitHub
+                <Github className="w-6 h-6 hover:text-blue-400 underline" />
               </a>
               <a
                 href={project.demo}

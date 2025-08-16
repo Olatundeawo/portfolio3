@@ -1,7 +1,4 @@
-import { useState } from "react";
 import About from "./About";
-import Skills from "./Skills";
-import Experience from "./Experience";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import { Typewriter } from "react-simple-typewriter";
@@ -49,10 +46,7 @@ function App() {
       </section>
 
       {/* Main Content */}
-
       <About />
-      {/* <Skills /> */}
-      {/* <Experience /> */}
       <Projects />
       <Contact />
 
