@@ -1,9 +1,16 @@
+import { useEffect } from "react";
 import About from "./About";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import { Typewriter } from "react-simple-typewriter";
 import Resume from "./assets/Resume.pdf";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 function App() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   return (
     <div className="bg-gray-950 text-gray-200 min-h-screen font-mono">
       {/* Header */}
