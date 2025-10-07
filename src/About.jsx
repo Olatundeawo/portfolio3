@@ -1,5 +1,10 @@
+import FadeInSection from "./fadeinsection";
+
 function About() {
   return (
+    <FadeInSection direction="left">
+
+    
     <section id="about" className="max-w-4xl mx-auto py-20 px-6">
       <div className="bg-gray-900 rounded-lg shadow-lg overflow-hidden">
         <div className="flex space-x-3 bg-gray-800 p-3">
@@ -30,6 +35,7 @@ function About() {
         </div>
       </div>
     </section>
+    </FadeInSection>
   );
 }
 
