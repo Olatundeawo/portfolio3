@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Github, Linkedin, Twitter } from "lucide-react";
+import FadeInSection from "./fadeinsection";
 
 function ConnectSection() {
   return (
+    <FadeInSection direction="down">
     <section id="contact" className="max-w-3xl mx-auto py-20 px-6 text-center">
       <div className="bg-black border border-green-400 rounded-lg p-6 text-left">
         <p className="text-green-400">visitor@portfolio:~$ send_message</p>
@@ -28,6 +30,7 @@ function ConnectSection() {
         </div>
       </div>
     </section>
+    </FadeInSection>
   );
 }
 
