@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter } from "lucide-react";
 import Blog from "./assets/Blog.png";
 import Hollart from "./assets/Hollar.png";
-import Swiftpay from "./assets/Swiftpay.png";
+import Swiftpay from "./assets/swiftpay.png";
 import FadeInSection from "./fadeinsection";
 
 const Projects = () => {
