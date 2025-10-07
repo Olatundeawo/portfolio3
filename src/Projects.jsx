@@ -2,13 +2,21 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter } from "lucide-react";
 import Blog from "./assets/Blog.png";
 import Hollart from "./assets/Hollar.png";
+import Swiftpay from "./assets/Swiftpay.png";
+import FadeInSection from "./fadeinsection";
 
 const Projects = () => {
   return (
     <section id="projects" className="max-w-6xl mx-auto py-20 px-6">
+      <FadeInSection direction="left">
+
       <h2 className="text-3xl font-bold text-white mb-10 text-center">
         My Projects
       </h2>
+      </FadeInSection>
+
+    <FadeInSection direction="right">
+
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
@@ -33,8 +41,15 @@ const Projects = () => {
             description:
               "An interactive quiz application with face detection using React, Face-API.js, and Django backend for validation. Not live yet",
             github: "https://github.com/Olatundeawo/testApp",
-            // demo: "https://quiz-app-demo.com",
             image: "/images/quizapp.png",
+          },
+          {
+            title: "SwiftPay – Secure Fintech Payment App",
+            description:
+              "A modern fintech web app for seamless money transfers, QR payments, and wallet management. Built with React, Express js, Tailwind CSS, and Prisma, Postgre, featuring real-time authentication and a sleek, responsive UI.",
+            github: "https://github.com/Olatundeawo/SwiftPay", 
+            demo: "https://app-swiftpay.onrender.com/",
+            image: Swiftpay 
           },
         ].map((project, index) => (
           <motion.div
@@ -75,6 +90,7 @@ const Projects = () => {
           </motion.div>
         ))}
       </div>
+    </FadeInSection>
     </section>
   );
 };
