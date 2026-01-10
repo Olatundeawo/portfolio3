@@ -1,42 +1,52 @@
-import FadeInSection from "./fadeinsection";
-
-function About() {
+export default function AboutTxt() {
   return (
-    <FadeInSection direction="left">
+    <div className="w-full h-full bg-[#f5f5f5] text-black overflow-auto">
+      <pre className="font-mono text-sm md:text-base leading-relaxed p-4 md:p-6 whitespace-pre-wrap">
+{`ABOUT_ME.TXT
+----------------------------
 
-    
-    <section id="about" className="max-w-4xl mx-auto py-20 px-6">
-      <div className="bg-gray-900 rounded-lg shadow-lg overflow-hidden">
-        <div className="flex space-x-3 bg-gray-800 p-3">
-          <span className="w-3 h-3 bg-red-500 rounded-full"></span>
-          <span className="w-3 h-3 bg-yellow-500 rounded-full"></span>
-          <span className="w-3 h-3 bg-green-500 rounded-full"></span>
-        </div>
-        <div className="p-6">
-          <p className="text-green-400">{"// about.js"}</p>
-          <p>
-            <span className="text-purple-400">const</span>{" "}
-            <span className="text-blue-400">aboutMe</span> = {"{"}
-          </p>
-          <p className="ml-6">
-            name: <span className="text-yellow-400">"Awotimilehin"</span>,
-          </p>
-          <p className="ml-6">
-            role: <span className="text-yellow-400">"Software Engineer"</span>,
-          </p>
-          <p className="ml-6">
-            skills: [<span className="text-yellow-400">"React"</span>,{" "}
-            <span className="text-yellow-400">"Node.js"</span>,{" "}
-            <span className="text-yellow-400">"Python"</span>,{" "}
-            <span className="text-yellow-400">"MYSQL"</span>,{" "}
-            <span className="text-yellow-400">""Tailwindcss</span>, ],
-          </p>
-          <p>{"};"}</p>
-        </div>
-      </div>
-    </section>
-    </FadeInSection>
+Name:
+Awotimilehin Babatunde
+
+Role:
+Software Engineer
+
+Summary:
+I build full-stack web and mobile applications and backend systems,
+with a growing focus on performance, structure,
+and real-world usability.
+
+I enjoy turning ideas into working products,
+and I pay close attention to how software feels
+from a user’s perspective — not just how it looks.
+
+Stack:
+- JavaScript / TypeScript
+- React / React Native
+- Node.js
+- Django / Flask
+- PostgreSQL / Prisma
+- REST APIs
+
+Experience:
+I have built and deployed multiple personal and
+prototype projects, including content platforms,
+quiz systems, and fintech-style applications,
+handling both frontend and backend development.
+
+Philosophy:
+Simple solutions scale better.
+Good software should feel invisible to the user.
+
+Location:
+Nigeria
+
+Status:
+Open to collaborations and opportunities.
+
+----------------------------
+End of file.`}
+      </pre>
+    </div>
   );
 }
-
-export default About;
