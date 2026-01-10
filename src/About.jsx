@@ -1,3 +1,4 @@
+
 export default function AboutTxt() {
   return (
     <div className="w-full h-full bg-[#f5f5f5] text-black overflow-auto">
