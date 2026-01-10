@@ -1,98 +1,120 @@
-import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter } from "lucide-react";
-import Blog from "./assets/Blog.png";
-import Hollart from "./assets/Hollar.png";
-import Swiftpay from "./assets/swiftpay.png";
-import FadeInSection from "./fadeinsection";
+import { Github, ExternalLink } from "lucide-react";
 
-const Projects = () => {
+const PROJECTS = [
+  {
+    name: "HollartKiddies",
+    modified: "24/11/2024 17:43",
+    type: "Web Application",
+    size: "6.8 MB",
+    github: "https://github.com/Olatundeawo/hollarkiddies_backend",
+    demo: "https://hollartkiddies.onrender.com/",
+  },
+  {
+    name: "Personal Blog",
+    modified: "16/10/2023 21:43",
+    type: "Flask Website",
+    size: "3.2 MB",
+    github: "https://github.com/Olatundeawo/blog_website",
+    demo: "https://olatundeawo1.pythonanywhere.com/",
+  },
+  {
+    name: "Quiz App",
+    modified: "09/09/2025 10:01",
+    type: "React / Django App",
+    size: "5.1 MB",
+    github: "https://github.com/Olatundeawo/testApp",
+  },
+  {
+    name: "SwiftPay",
+    modified: "24/10/2025 19:22",
+    type: "Fintech Web App",
+    size: "7.4 MB",
+    github: "https://github.com/Olatundeawo/SwiftPay",
+    demo: "https://app-swiftpay.onrender.com/",
+  },
+  {
+    name: "Ordora",
+    modified: "10/12/2025 16:50",
+    type: "Mobile app",
+    size: "6.7 MB",
+    github: "https://github.com/Olatundeawo/ordora",
+    demo: "https://expo.dev/preview/update?message=fix+carts&updateRuntimeVersion=exposdk%3A54.0.0&createdAt=2025-12-11T20%3A41%3A21.036Z&slug=exp&projectId=bea9bc36-8775-441d-9350-569a283a38c0&group=ff45dee6-6d71-4d2a-8ef4-dca6b10ff349"
+  },
+  {
+    name: "ImprovTrend",
+    modified: "08/01/2026 20:12",
+    type: "mobile, web app",
+    size: "8.4 MB",
+    github: "https://github.com/Olatundeawo/improvtrend",
+    demo: "https://improvtrend--4w0aas555x.expo.app/"
+  }
+];
+
+export default function ProjectsExplorer() {
   return (
-    <section id="projects" className="max-w-6xl mx-auto py-20 px-6">
-      <FadeInSection direction="left">
+    <div className="w-full h-full text-sm bg-[#1e1e1e] border border-white/10 rounded-md overflow-hidden">
+      {/* SCROLL CONTAINER */}
+      <div className="overflow-x-auto">
+        <div className="min-w-[720px]">
+          {/* HEADER */}
+          <div className="grid grid-cols-[1.5fr_180px_160px_100px_140px] px-3 py-2 border-b border-white/10 text-gray-400 font-semibold sticky top-0 bg-[#1e1e1e] z-10">
+            <div>Name</div>
+            <div>Date modified</div>
+            <div>Type</div>
+            <div>Size</div>
+            <div>Actions</div>
+          </div>
 
-      <h2 className="text-3xl font-bold text-white mb-10 text-center">
-        My Projects
-      </h2>
-      </FadeInSection>
+          {/* ROWS */}
+          {PROJECTS.map((p) => (
+            <div
+              key={p.name}
+              className="grid grid-cols-[1.5fr_180px_160px_100px_140px] px-3 py-2 items-center border-b border-white/5 hover:bg-white/5 transition group"
+            >
+              {/* NAME */}
+              <div className="flex items-center gap-3 truncate">
+                <span>📁</span>
+                <span className="font-medium truncate">{p.name}</span>
+              </div>
 
-    <FadeInSection direction="right">
+              <div className="text-gray-400 whitespace-nowrap">
+                {p.modified}
+              </div>
 
+              <div className="text-gray-400 truncate">{p.type}</div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {[
-          {
-            title: "HollartKiddies – E-Commerce Platform",
-            description:
-              "A modern, responsive e-commerce app for kids’ fashion. Built with React, Tailwind, Node.js, Express, Cloudinary, and JWT authentication.",
-            github: "https://github.com/Olatundeawo/hollarkiddies_backend",
-            demo: "https://hollartkiddies.onrender.com/",
-            image: Hollart,
-          },
-          {
-            title: "Personal Blog Website",
-            description:
-              "A clean and responsive personal blog built with Python (Flask), featuring easy navigation, blog posts, and deployed on PythonAnywhere.",
-            github: "https://github.com/Olatundeawo/blog_website",
-            demo: "https://olatundeawo1.pythonanywhere.com/",
-            image: Blog,
-          },
-          {
-            title: "Quiz App",
-            description:
-              "An interactive quiz application with face detection using React, Face-API.js, and Django backend for validation. Not live yet",
-            github: "https://github.com/Olatundeawo/testApp",
-            image: "/images/quizapp.png",
-          },
-          {
-            title: "SwiftPay – Secure Fintech Payment App",
-            description:
-              "A modern fintech web app for seamless money transfers, QR payments, and wallet management. Built with React, Express js, Tailwind CSS, and Prisma, Postgre, featuring real-time authentication and a sleek, responsive UI.",
-            github: "https://github.com/Olatundeawo/SwiftPay", 
-            demo: "https://app-swiftpay.onrender.com/",
-            image: Swiftpay 
-          },
-        ].map((project, index) => (
-          <motion.div
-            key={index}
-            whileHover={{ scale: 1.05 }}
-            className="bg-gray-900 rounded-lg shadow-lg p-6"
-          >
-            {/* Project Image */}
-            <img
-              src={project.image}
-              alt={project.title}
-              className="h-40 w-full object-cover rounded mb-4"
-            />
+              <div className="text-gray-400 whitespace-nowrap">
+                {p.size}
+              </div>
 
-            {/* Project Info */}
-            <h3 className="text-xl font-semibold text-white">
-              {project.title}
-            </h3>
-            <p className="text-gray-400 mt-2">{project.description}</p>
+              {/* ACTIONS */}
+              <div className="flex gap-3">
+                <a
+                  href={p.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-1 text-xs text-blue-400 hover:underline"
+                >
+                  <Github size={14} />
+                  GitHub
+                </a>
 
-            <div className="flex space-x-4 mt-4">
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Github className="w-6 h-6 hover:text-blue-400 underline" />
-              </a>
-              <a
-                href={project.demo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-400 hover:underline"
-              >
-                Live Demo
-              </a>
+                {p.demo && (
+                  <a
+                    href={p.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center gap-1 text-xs text-blue-400 hover:underline"
+                  >
+                    <ExternalLink size={14} />
+                    Live
+                  </a>
+                )}
+              </div>
             </div>
-          </motion.div>
-        ))}
+          ))}
+        </div>
       </div>
-    </FadeInSection>
-    </section>
+    </div>
   );
-};
-
-export default Projects;
+}
