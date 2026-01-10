@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 import X from "./assets/X.png";
 import github from "./assets/github.png";
-import linkedin from "./assets/linkedin.png";
+import linkedin from "./assets/Linkedin.png";
 import tiktok from './assets/tiktok.png'
 import WindowsFolderIcon from "./folder";
 
