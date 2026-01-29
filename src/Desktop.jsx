@@ -10,7 +10,7 @@ import Window from "./Window";
 import Taskbar from "./Taskbar";
 import ProjectsExplorer from "./Projects";
 import AboutTxt from "./About";
-import Resume from "./assets/Resume.pdf";
+import Resume from "./assets/babatunde.docx";
 
 const APPS = [
   { id: "about", label: "About Me", icon: file },
