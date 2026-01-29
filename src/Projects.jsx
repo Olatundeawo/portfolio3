@@ -47,7 +47,8 @@ const PROJECTS = [
     type: "mobile, web app",
     size: "8.4 MB",
     github: "https://github.com/Olatundeawo/improvtrend",
-    demo: "https://improvtrend--4w0aas555x.expo.app/"
+    // demo: "https://improvtrend--4w0aas555x.expo.app/"
+    demo: "https://improvtrend--dm2v9v6ad1.expo.app/"
   }
 ];
 
