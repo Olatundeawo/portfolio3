@@ -49,6 +49,14 @@ const PROJECTS = [
     github: "https://github.com/Olatundeawo/improvtrend",
     // demo: "https://improvtrend--4w0aas555x.expo.app/"
     demo: "https://improvtrend--dm2v9v6ad1.expo.app/"
+  },
+  {
+    name: "Landing Page",
+    modified: "06/02/2026 01:33",
+    type: "web app",
+    size: "18.4 kb",
+    github: "https://github.com/Olatundeawo/improvtrendlandingpage",
+    demo: "https://improvtrendlandingpage.vercel.app/"
   }
 ];
 
